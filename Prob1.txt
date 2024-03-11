@@ -1,0 +1,18 @@
+package Assignments;
+
+public class Prob1 {
+    public static void main(String args[])
+    {
+        Prob1 add_numb=new Prob1();
+        add_numb.add_float_num(5.6f,8.0f);
+
+    }
+    public float add_float_num(float x,float y)
+    {
+        float z;
+        z=x+y;
+        System.out.println(z);
+        return(z);
+    }
+
+}
