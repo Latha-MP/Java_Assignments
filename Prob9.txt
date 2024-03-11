@@ -1,0 +1,11 @@
+
+package Assignments.Prob9;
+
+public class Prog9 {
+    public static void main(String[] args) {
+        String str="ABCDE12345";
+
+        System.out.println(str.substring(str.indexOf("1")));
+
+    }
+}

@@ -1,0 +1,66 @@
+
+package Assignments.Prob4;
+
+import java.util.Scanner;
+
+public class Prob4 {
+
+    int num1,num2,result;
+    String option;
+    public void getData(int num11,int num22,String opt)
+    {
+        num1=num11;
+        num2=num22;
+        option=opt;
+        if(option.equals("add"))
+        {
+            result=num1+num2;
+        }
+        else if(option.equals("sub"))
+        {
+            result=num1-num2;
+        }
+        else if (option.equals("multi"))
+        {
+            result=num1*num2;
+        }
+        else if(option.equals("div"))
+        {
+            try
+            {
+                result=num1/num2;
+            }
+            catch (Exception e)
+            {
+                System.out.println("Exception Caught");
+                e.getMessage();
+            }
+        }
+        else
+        {
+            System.out.println("Invalid option"+option);
+        }
+
+
+    }
+
+       public void showData()
+    {
+        System.out.println("Option selected: "+ option +" num1:"+num1+" num2:"+num2+ " result is :"+ result);
+    }
+
+    public static void main(String[] args) {
+
+        Prob4 p4 = new Prob4();
+        p4.getData(10,20,"add");
+        p4.showData();
+        p4.getData(20,30,"multiply");
+        p4.showData();
+        p4.getData(40,8,"divide");
+        p4.showData();
+        p4.getData(50,25,"subtract");
+        p4.showData();
+        p4.getData(50,25,"power");
+
+    }
+}

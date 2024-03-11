@@ -1,0 +1,23 @@
+
+
+package Assignments.Prob14;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class Prog14 {
+
+    static public String getDate()
+    {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+        LocalDateTime now = LocalDateTime.now();
+        String str = dtf.format(now);
+        return str;
+    }
+
+    public static void main(String[] args) {
+
+
+        System.out.println(getDate());
+    }
+}

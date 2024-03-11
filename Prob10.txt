@@ -1,0 +1,22 @@
+
+
+package Assignments.Prob10;
+
+public class PrivateAClass {
+
+    private int a=10;
+
+}
+
+package Assignments.Prob10;
+
+import java.lang.reflect.Field;
+
+public class Program10 extends PrivateAClass
+{
+    public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
+        Field f = PrivateAClass.class.getDeclaredField("a"); //getting private declared field from Class PrivateAClass and storing it in Field f
+        f.setAccessible(true); //setting the accessibility of the field to true
+        System.out.println("Accessing value of Private member 'a' for parent class :" +f.get(new PrivateAClass()));
+    }
+}

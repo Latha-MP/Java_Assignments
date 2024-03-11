@@ -1,0 +1,18 @@
+
+package Assignments.Prob21;
+
+public class Prog21 {
+
+     public String getString(String name, String replaceMe, String replaceBy)
+    {
+        String result = name.replace(replaceMe,replaceBy);
+        return result;
+    }
+
+    public static void main(String[] args) {
+        Prog21 pg21=new Prog21();
+
+        System.out.println("Actual String: Liverpool replaced by: "+pg21.getString("Liverpool","Liverpool", "Liverpool Football Club"));
+        System.out.println("Actual String City replaced by: "+ pg21.getString("City", "City", "Manchester City"));
+    }
+}
